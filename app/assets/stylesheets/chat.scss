@@ -2,3 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.bg-submit {
+    background: #996633
+}
+
+.bg-chat {
+    background: #D8F3F0;
+}
+
+.bg-man-line {
+    background: #FFFFFF;
+}
+
+.man-talk-contents::before {
+    position: absolute;
+    content: ' ';
+    margin-top: 10px;
+    z-index: -1;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #FFFFFF;
+    border-bottom: 10px solid transparent;
+}
+
+.bg-woman-line {
+    background: #78FF6C;
+}
+
+.woman-talk-contents::before {
+    content: ' ';
+    z-index: -1;
+    float: right;
+    margin-top: 10px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #78FF6C;
+    border-bottom: 10px solid transparent;
+}
