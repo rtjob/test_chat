@@ -120,7 +120,7 @@ development:
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
-    # raise_not_found_error: true
+    raise_not_found_error: false
 
     # Raise an error when defining a scope with the same name as an
     # existing method. (default: false)
@@ -162,9 +162,12 @@ test:
         read:
           mode: :primary
         max_pool_size: 1
+
 production:
  clients:
    default:
-    uri:
+    uri: mongodb://heroku_73jbghjl:qiteibeuutvts9jn32cg6bruga@ds243054.mlab.com:43054/heroku_73jbghjl
     options:
       connect_timeout: 15
+  options:
+    raise_not_found_error: false
