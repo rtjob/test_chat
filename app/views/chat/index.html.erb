@@ -3,19 +3,16 @@
         <img class="rounded mx-1 mt-4 mb-1" alt="logo" src="/jpg/Logo/1_Primary.png">
     </section>
     <section class="bg-submit px-5 pt-3 pb-2">
+        <% if @errorMessage %>
+        <div class="text-center alert-danger">
+            <%= @errorMessage %>
+        </div>
+        <% end %>
         <div class="text-left">
             <div class="form-group row">
                 <div class="col-sm-2">
                     <label class="text-sex h5">性別</label>
                 </div>
-                <%# <div class="col-sm-8 btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-success" style="width:50%">
-                        <input type="radio" name="" id="option1" autocomplete="off" active aria-pressed="true">男性
-                    </label>
-                    <label class="btn btn-info" style="width:50%">
-                        <input type="radio" name="" id="option2" autocomplete="off" active aria-pressed="true">女性
-                    </label>
-                </div> %>
                 <div class="col-sm-8 btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-success focus active" style="width:50%" id="selectedLabelMan" name="selectedLavelSex">
                         <input type="radio" name="selectedSex" id="selectedMan" autocomplete="off" checked onclick="changeSexForced()">
@@ -44,6 +41,8 @@
         </div>
     </section>
     <section class="bg-chat px-3 pt-3 pb-3">
+
+
         <img class="rounded float-left mx-1 mt-3 mb-1" alt="man_icon" src="/jpg/man_icon.jpeg">
         <p class="mb-1 mx-5">nameでっせnameでっせnameでっせ</p>
         <div class="mx-3 mb-2">
