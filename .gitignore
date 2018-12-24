@@ -69,3 +69,6 @@ yarn-debug.log*
 .DS_Store
 
 # End of https://www.gitignore.io/api/rails
+
+/md
+/md/*
