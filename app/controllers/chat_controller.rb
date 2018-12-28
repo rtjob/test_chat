@@ -12,7 +12,7 @@ class ChatController < ApplicationController
     # フォームから送信されたデータを受け取り、保存する
     @chat = Chat.new(
        userName: params[:inputUserName],
-       comments: params[:inputComment]
+       # comments: params[:inputComment]
     )
     #rootページにredirect
     if @chat.save
