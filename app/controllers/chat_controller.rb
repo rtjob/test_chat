@@ -11,8 +11,9 @@ class ChatController < ApplicationController
   def create
     # フォームから送信されたデータを受け取り、保存する
     @chat = Chat.new(
+       sexStatus: params[:selectedSex],      
        userName: params[:inputUserName],
-       # comments: params[:inputComment]
+       comments: params[:inputComment]
     )
     #rootページにredirect
     if @chat.save

@@ -9,14 +9,32 @@
         </div>
         <% end %>
         <%= form_for @chatform, url: chat_create_path do |f| %>
+        <div class="text-left">
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <%= f.label :性別 ,class:"text-sex h5" %>
+                    <!-- <label class="text-sex h5">性別</label> -->
+                </div>
+                <div class="col-sm-8 btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-success focus active" style="width:50%" id="selectedLabelMan" name="selectedLavelSex">
+                        <%= f.radio_button :sexStatus, "10", name:'selectedSex',:checked=>'checked' %> 男性
+                    </label>
+                    <label class="btn btn-default" style="width:50%" id="selectedLabelWoman" name="selectedLavelSex">
+                        <%= f.radio_button :sexStatus, "20", name:'selectedSex' %> 女性
+                    </label>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-8 mb-3">
+                <!-- <input type="input" class="form-control" name="inputUserName" maxlength="20" placeholder="名前(20文字まで)">-->
                 <%= f.text_field :userName, name: :inputUserName,class: "form-control", maxlength: 20 ,:placeholder => "名前(20文字まで)"%>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-10 mb-1">
-
+                <!-- <textarea rows="3" class="form-control" name="inputComment" maxlength="140" placeholder="コメント(140文字まで)"></textarea> -->
+                <%= f.text_area :comments, name: :inputComment, raws: "3", class: "form-control", maxlength: 140 ,:placeholder => "コメント(140文字まで)"%>
             </div>
             <div class="col-sm-2">
                 <%= f.submit "投稿", class: "btn btn-success btn-md float-right"%>
