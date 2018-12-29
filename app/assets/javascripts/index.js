@@ -16,7 +16,6 @@ function changeSexForced() {
         selectedLabelWoman.classList.remove("focus");
         selectedLabelWoman.classList.remove("actice");
 
-        selectedWoman.checked = false;
     } else {
         //選択地変更することでCSSを変更する
         selectedLabelMan.classList.remove("btn-success");
@@ -29,6 +28,5 @@ function changeSexForced() {
         selectedLabelWoman.classList.add("focus");
         selectedLabelWoman.classList.add("actice");
 
-        selectedWoman.checked = true;
     }
 }

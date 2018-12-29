@@ -42,28 +42,35 @@
                 <%= f.submit "投稿", class: "btn btn-success btn-md float-right"%>
             </div>
         </div>
-
-
         <% end %>
     </section>
-    <section class="bg-chat px-3 pt-3 pb-3">
+    <section class="bg-chat px-3 pt-3 pb-5">
+        <% @chats.each do |chat| %>
+        <% if chat.sexStatus == 10 %>
         <img class="rounded float-left mx-1 mt-3 mb-1" alt="man_icon" src="/jpg/man_icon.jpeg">
-        <p class="mb-1 mx-5">男でっせ男でっせ男でっせ</p>
+        <p class="mb-1 mx-5">
+            <%= chat.userName%>
+        </p>
         <div class="mx-3 mb-2">
             <div class="man-talk-contents">
                 <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm text-left bg-man-line man-talk-contents">
-                    男talktak男talktak男talktak男talktak男talktak
+                    <%= chat.comments%>
                 </p>
             </div>
         </div>
+        <% else %>
         <img class="rounded float-right mx-1 mt-3 mb-1" alt="woman_icon" src="/jpg/woman_icon.jpeg">
-        <p class="mb-1 mx-5">女やで女やで女やで女やで女やで</p>
+        <p class="mb-1 mx-5">
+            <%= chat.userName%>
+        </p>
         <div class="mx-3 mb-2">
             <div class="woman-talk-contents">
                 <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm bg-woman-line text-left">
-                    女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る女喋る
+                    <%= chat.comments%>
                 </p>
             </div>
         </div>
+        <% end %>
+        <% end %>
     </section>
 </main>
