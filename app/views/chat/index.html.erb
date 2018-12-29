@@ -8,6 +8,18 @@
             <%= @errorMessage %>
         </div>
         <% end %>
+        <img class="rounded float-right mx-1 mt-3 mb-1" alt="woman_icon" src="/jpg/woman_icon.jpeg">
+        <p class="mb-1 mx-5">
+            女性を選択するとこんな感じです
+
+        </p>
+        <div class="mx-3 mb-2">
+            <div class="woman-talk-contents">
+                <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm bg-woman-line text-left">
+                    男性はコメが送られたように見える見た目です
+                </p>
+            </div>
+        </div>
         <% @chats.each do |chat| %>
         <% if chat.sexStatus == 10 %>
         <img class="rounded float-left mx-1 mt-3 mb-1" alt="man_icon" src="/jpg/man_icon.jpeg">
