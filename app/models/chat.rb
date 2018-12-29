@@ -1,6 +1,7 @@
 class Chat
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Enum
 
   field :id, type: String
   field :sexStatus, type: Integer

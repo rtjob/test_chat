@@ -17,10 +17,12 @@
                 </div>
                 <div class="col-sm-8 btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-success focus active" style="width:50%" id="selectedLabelMan" name="selectedLavelSex">
-                        <%= f.radio_button :sexStatus, "10", name:'selectedSex',:checked=>'checked' %> 男性
+                        <%= f.radio_button :sexStatus, 10, name:'selectedSex',:checked=>'checked',id: 'selectedMan',:onchange => 'changeSexForced()' %>
+                        男性
                     </label>
                     <label class="btn btn-default" style="width:50%" id="selectedLabelWoman" name="selectedLavelSex">
-                        <%= f.radio_button :sexStatus, "20", name:'selectedSex' %> 女性
+                        <%= f.radio_button :sexStatus, 20, name:'selectedSex' ,id: 'selectedWoman',:onchange => 'changeSexForced()' %>
+                        女性
                     </label>
                 </div>
             </div>
