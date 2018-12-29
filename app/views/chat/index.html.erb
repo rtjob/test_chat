@@ -2,12 +2,41 @@
     <section class="text-left">
         <img class="rounded mx-1 mt-4 mb-1" alt="logo" src="/jpg/Logo/1_Primary.png">
     </section>
-    <section class="bg-submit px-5 pt-3 pb-2">
+    <section class="bg-chat px-3 pt-3 pb-2">
         <% if @errorMessage %>
         <div class="text-center alert-danger mb-2">
             <%= @errorMessage %>
         </div>
         <% end %>
+        <% @chats.each do |chat| %>
+        <% if chat.sexStatus == 10 %>
+        <img class="rounded float-left mx-1 mt-3 mb-1" alt="man_icon" src="/jpg/man_icon.jpeg">
+        <p class="mb-1 mx-5">
+            <%= chat.userName%>
+        </p>
+        <div class="mx-3 mb-2">
+            <div class="man-talk-contents">
+                <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm text-left bg-man-line man-talk-contents">
+                    <%= chat.comments%>
+                </p>
+            </div>
+        </div>
+        <% else %>
+        <img class="rounded float-right mx-1 mt-3 mb-1" alt="woman_icon" src="/jpg/woman_icon.jpeg">
+        <p class="mb-1 mx-5">
+            <%= chat.userName%>
+        </p>
+        <div class="mx-3 mb-2">
+            <div class="woman-talk-contents">
+                <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm bg-woman-line text-left">
+                    <%= chat.comments%>
+                </p>
+            </div>
+        </div>
+        <% end %>
+        <% end %>
+    </section>
+    <section class="bg-submit px-5 pt-3 pb-3">
         <%= form_for @chatform, url: chat_create_path do |f| %>
         <div class="text-left">
             <div class="form-group row">
@@ -44,33 +73,5 @@
         </div>
         <% end %>
     </section>
-    <section class="bg-chat px-3 pt-3 pb-5">
-        <% @chats.each do |chat| %>
-        <% if chat.sexStatus == 10 %>
-        <img class="rounded float-left mx-1 mt-3 mb-1" alt="man_icon" src="/jpg/man_icon.jpeg">
-        <p class="mb-1 mx-5">
-            <%= chat.userName%>
-        </p>
-        <div class="mx-3 mb-2">
-            <div class="man-talk-contents">
-                <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm text-left bg-man-line man-talk-contents">
-                    <%= chat.comments%>
-                </p>
-            </div>
-        </div>
-        <% else %>
-        <img class="rounded float-right mx-1 mt-3 mb-1" alt="woman_icon" src="/jpg/woman_icon.jpeg">
-        <p class="mb-1 mx-5">
-            <%= chat.userName%>
-        </p>
-        <div class="mx-3 mb-2">
-            <div class="woman-talk-contents">
-                <p class="mh-100 mx-5 p-2 ml-60 rounded shadow-sm bg-woman-line text-left">
-                    <%= chat.comments%>
-                </p>
-            </div>
-        </div>
-        <% end %>
-        <% end %>
-    </section>
+
 </main>
