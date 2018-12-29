@@ -56,6 +56,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+gem 'ruby-debug-ide'
+gem 'debase'
+
+# enum(列挙型)を使用するために必要
+# gem "mongoid-enum"
+# mongoid 7のバージョンにまだ対応していないのでforkしています
+gem 'mongoid-enum', github: 'chocoken517/mongoid-enum'
+
 # bootstrap
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 # jquery-rails(bootstrapはjqueryに依存するため必要)
@@ -63,5 +72,5 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 # mongodb(DB:ローカル、heroku共にMongodbを使用することを想定)
 # gem 'mongodb', '~> 2.1'
 group :development, :test, :production do
-  gem 'mongoid', '~> 7.0', '>= 7.0.2'
+  gem 'mongoid', '~> 6.0'
 end
