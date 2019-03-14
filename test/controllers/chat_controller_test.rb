@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ChatControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get chat_index_url
+    get root_path
+    assert_template '/chat/index'
     assert_response :success
   end
 
