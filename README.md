@@ -7,10 +7,10 @@ Line風の会話を再現した簡易的なチャットです<br>
 この時男性を選ぶとLineでいう相手から何か来たような見た目に<br>
 女性を選ぶとLineで自分が発言したような見た目になります
 
-#URL
+# URL
 https://easy-chatbot.herokuapp.com/
 
-#使用技術
+# 使用技術
 * Ruby version<br>
 2.3.7p456<br>
 <br>
