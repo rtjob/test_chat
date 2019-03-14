@@ -10,7 +10,7 @@ Line風の会話を再現した簡易的なチャットです<br>
 # URL
 https://easy-chatbot.herokuapp.com/
 
-# 使用技術
+## 使用技術
 * Ruby version<br>
 2.3.7p456<br>
 <br>
@@ -23,7 +23,7 @@ Bootstrap v4.1<br>
 mongo v6.0<br>
 <br>
 
-###その他
+### その他
 * System dependencies<br>
 2019年3月現在独立<br>
 <br>
