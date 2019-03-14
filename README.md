@@ -7,18 +7,25 @@ Line風の会話を再現した簡易的なチャットです<br>
 この時男性を選ぶとLineでいう相手から何か来たような見た目に<br>
 女性を選ぶとLineで自分が発言したような見た目になります
 
-##使用技術
-* Ruby version
-2.3.7p456
+#URL
+https://easy-chatbot.herokuapp.com/
 
-* frontendFramework
-Bootstrap v4.1
+#使用技術
+* Ruby version<br>
+2.3.7p456<br>
+<br>
 
-* Database creation
-mongo v6.0
+* frontendFramework<br>
+Bootstrap v4.1<br>
+<br>
 
-* System dependencies
-2019年3月現在独立
+* Database creation<br>
+mongo v6.0<br>
+<br>
 
-* Configuration
+###その他
+* System dependencies<br>
+2019年3月現在独立<br>
+<br>
+
 
